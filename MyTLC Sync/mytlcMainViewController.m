@@ -138,8 +138,8 @@ MBHUDView *alert;
     NSString *password = txtPassword.text;
     
     PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
-    [bindings setObject:username forKey:@"tlc_username"];
-    [bindings setObject:password forKey:@"tlc_password"];
+    [bindings setObject:username forKey:@"tlc_username" accessibleAttribute:kSecAttrAccessibleAlways];
+    [bindings setObject:password forKey:@"tlc_password" accessibleAttribute:kSecAttrAccessibleAlways];
     
     // Clears the text boxes as creds aren't allowed to be saved
     //txtPassword.text=@"";

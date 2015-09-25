@@ -277,6 +277,7 @@
     [self.view addGestureRecognizer:tap];
     
     [self loadAddress];
+    
 }
 
 - (void)didReceiveMemoryWarning

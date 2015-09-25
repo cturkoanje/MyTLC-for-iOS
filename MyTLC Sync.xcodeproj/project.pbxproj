@@ -21,11 +21,6 @@
 		03C36E7C181AC4C90018AB0A /* mytlcAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C36E7B181AC4C90018AB0A /* mytlcAppDelegate.m */; };
 		03C36E7F181AC4C90018AB0A /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C36E7D181AC4C90018AB0A /* Main_iPhone.storyboard */; };
 		03C36E87181AC4C90018AB0A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C36E86181AC4C90018AB0A /* Images.xcassets */; };
-		03C36E8E181AC4C90018AB0A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C36E8D181AC4C90018AB0A /* XCTest.framework */; };
-		03C36E8F181AC4C90018AB0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C36E6B181AC4C90018AB0A /* Foundation.framework */; };
-		03C36E90181AC4C90018AB0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C36E6F181AC4C90018AB0A /* UIKit.framework */; };
-		03C36E98181AC4C90018AB0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03C36E96181AC4C90018AB0A /* InfoPlist.strings */; };
-		03C36E9A181AC4C90018AB0A /* MyTLC_SyncTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C36E99181AC4C90018AB0A /* MyTLC_SyncTests.m */; };
 		03C8AE86183AC70100FB1304 /* mytlcAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C8AE85183AC70100FB1304 /* mytlcAddressViewController.m */; };
 		03E47607182C0B4C0089797A /* mytlcSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E47606182C0B4C0089797A /* mytlcSettingsTableViewController.m */; };
 		03E4760A182C57050089797A /* mytlcCalendarSelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E47609182C57050089797A /* mytlcCalendarSelectTableViewController.m */; };
@@ -70,32 +65,52 @@
 		8304E7051B20F09500DE5706 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8304E6F11B20F09500DE5706 /* Icon@2x.png */; };
 		8304E7061B20F09500DE5706 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 8304E6F21B20F09500DE5706 /* iTunesArtwork */; };
 		8304E7071B20F09500DE5706 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 8304E6F31B20F09500DE5706 /* iTunesArtwork@2x */; };
-		8304E7091B20F0A100DE5706 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8304E7081B20F0A100DE5706 /* Images-2.xcassets */; };
+		8317E80B1B98FB670003947B /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8317E80A1B98FB670003947B /* TableView.m */; };
+		832A5B431BA3D8160080F44B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 832A5B421BA3D8160080F44B /* Images.xcassets */; };
+		833F5E291B9A786F00B53013 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 833F5E281B9A786F00B53013 /* MBProgressHUD.m */; };
+		833F5E2D1B9A841000B53013 /* BBY-42.png in Resources */ = {isa = PBXBuildFile; fileRef = 833F5E2C1B9A841000B53013 /* BBY-42.png */; };
+		836DEE671BACD20000DA66E5 /* NoContentWatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836DEE661BACD20000DA66E5 /* NoContentWatchViewController.m */; };
+		836DEE6B1BACD69500DA66E5 /* NewTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 836DEE6A1BACD69500DA66E5 /* NewTableView.m */; };
+		836DEE6E1BACDF2100DA66E5 /* WatchShiftDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836DEE6D1BACDF2100DA66E5 /* WatchShiftDetailViewController.m */; };
 		837E4D101B20113500068963 /* PDKeychainBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = 837E4D0D1B20113500068963 /* PDKeychainBindings.m */; };
 		837E4D111B20113500068963 /* PDKeychainBindingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 837E4D0F1B20113500068963 /* PDKeychainBindingsController.m */; };
 		837E4D161B201A9300068963 /* mytlcMainScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 837E4D151B201A9300068963 /* mytlcMainScheduler.m */; };
+		8382D2F01B97E09700BCFCB3 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CBCFB21B2950FF003706DA /* NotificationCenter.framework */; };
+		8382D2F41B97E09700BCFCB3 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8382D2F31B97E09700BCFCB3 /* TodayViewController.m */; };
+		8382D2F71B97E09700BCFCB3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8382D2F51B97E09700BCFCB3 /* MainInterface.storyboard */; };
+		8382D2FB1B97E09700BCFCB3 /* Next TLC Shift.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8382D2EF1B97E09700BCFCB3 /* Next TLC Shift.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8382D3061B98B0D200BCFCB3 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8382D3041B98B0D200BCFCB3 /* Interface.storyboard */; };
+		8382D30F1B98B0D200BCFCB3 /* MyTLC for Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8382D30E1B98B0D200BCFCB3 /* MyTLC for Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8382D3151B98B0D200BCFCB3 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8382D3141B98B0D200BCFCB3 /* InterfaceController.m */; };
+		8382D3181B98B0D200BCFCB3 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8382D3171B98B0D200BCFCB3 /* ExtensionDelegate.m */; };
+		8382D31B1B98B0D200BCFCB3 /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8382D31A1B98B0D200BCFCB3 /* ComplicationController.m */; };
+		8382D31D1B98B0D200BCFCB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8382D31C1B98B0D200BCFCB3 /* Assets.xcassets */; };
+		8382D3211B98B0D200BCFCB3 /* MyTLC for Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8382D3021B98B0D200BCFCB3 /* MyTLC for Watch.app */; };
 		83C6A9BB1B0A7A310042954D /* mytlcShiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C6A9BA1B0A7A310042954D /* mytlcShiftViewController.m */; };
-		83CBCFC71B29517D003706DA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CBCFB21B2950FF003706DA /* NotificationCenter.framework */; };
-		83CBCFCB1B29517D003706DA /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CBCFCA1B29517D003706DA /* TodayViewController.m */; };
-		83CBCFCE1B29517D003706DA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CBCFCC1B29517D003706DA /* MainInterface.storyboard */; };
-		83CBCFD21B29517D003706DA /* MyTLC.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 83CBCFC61B29517D003706DA /* MyTLC.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D634E6AC19B4B3210094F67E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03252E511829C6A7001AF9E1 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		03C36E91181AC4C90018AB0A /* PBXContainerItemProxy */ = {
+		8382D2F91B97E09700BCFCB3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 03C36E60181AC4C90018AB0A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 03C36E67181AC4C90018AB0A;
-			remoteInfo = "MyTLC Sync";
-		};
-		83CBCFD01B29517D003706DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03C36E60181AC4C90018AB0A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 83CBCFC51B29517D003706DA;
+			remoteGlobalIDString = 8382D2EE1B97E09700BCFCB3;
 			remoteInfo = MyTLC;
+		};
+		8382D3101B98B0D200BCFCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03C36E60181AC4C90018AB0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8382D30D1B98B0D200BCFCB3;
+			remoteInfo = "MyTLC for Watch Extension";
+		};
+		8382D31F1B98B0D200BCFCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03C36E60181AC4C90018AB0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8382D3011B98B0D200BCFCB3;
+			remoteInfo = "MyTLC for Watch";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -106,9 +121,31 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				83CBCFD21B29517D003706DA /* MyTLC.appex in Embed App Extensions */,
+				8382D2FB1B97E09700BCFCB3 /* Next TLC Shift.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8382D3251B98B0D300BCFCB3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8382D30F1B98B0D200BCFCB3 /* MyTLC for Watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8382D3291B98B0D300BCFCB3 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				8382D3211B98B0D200BCFCB3 /* MyTLC for Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -138,7 +175,6 @@
 		03C36E7B181AC4C90018AB0A /* mytlcAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mytlcAppDelegate.m; sourceTree = "<group>"; };
 		03C36E7E181AC4C90018AB0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		03C36E86181AC4C90018AB0A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		03C36E8C181AC4C90018AB0A /* MyTLC SyncTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyTLC SyncTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C36E8D181AC4C90018AB0A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		03C36E95181AC4C90018AB0A /* MyTLC SyncTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyTLC SyncTests-Info.plist"; sourceTree = "<group>"; };
 		03C36E97181AC4C90018AB0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -209,21 +245,47 @@
 		8304E6F11B20F09500DE5706 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		8304E6F21B20F09500DE5706 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		8304E6F31B20F09500DE5706 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
-		8304E7081B20F0A100DE5706 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
+		8317E80A1B98FB670003947B /* TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableView.m; sourceTree = "<group>"; };
+		8317E80C1B98FB770003947B /* TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableView.h; sourceTree = "<group>"; };
+		832A5B421BA3D8160080F44B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		833F5E271B9A786F00B53013 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		833F5E281B9A786F00B53013 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		833F5E2C1B9A841000B53013 /* BBY-42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BBY-42.png"; sourceTree = "<group>"; };
+		836DEE651BACD20000DA66E5 /* NoContentWatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoContentWatchViewController.h; sourceTree = "<group>"; };
+		836DEE661BACD20000DA66E5 /* NoContentWatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoContentWatchViewController.m; sourceTree = "<group>"; };
+		836DEE691BACD69500DA66E5 /* NewTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTableView.h; sourceTree = "<group>"; };
+		836DEE6A1BACD69500DA66E5 /* NewTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTableView.m; sourceTree = "<group>"; };
+		836DEE6C1BACDF2100DA66E5 /* WatchShiftDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchShiftDetailViewController.h; sourceTree = "<group>"; };
+		836DEE6D1BACDF2100DA66E5 /* WatchShiftDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchShiftDetailViewController.m; sourceTree = "<group>"; };
 		837E4D0C1B20113500068963 /* PDKeychainBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindings.h; sourceTree = "<group>"; };
 		837E4D0D1B20113500068963 /* PDKeychainBindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindings.m; sourceTree = "<group>"; };
 		837E4D0E1B20113500068963 /* PDKeychainBindingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindingsController.h; sourceTree = "<group>"; };
 		837E4D0F1B20113500068963 /* PDKeychainBindingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindingsController.m; sourceTree = "<group>"; };
 		837E4D141B201A9300068963 /* mytlcMainScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mytlcMainScheduler.h; sourceTree = "<group>"; };
 		837E4D151B201A9300068963 /* mytlcMainScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mytlcMainScheduler.m; sourceTree = "<group>"; };
+		8382D2EF1B97E09700BCFCB3 /* Next TLC Shift.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Next TLC Shift.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8382D2F21B97E09700BCFCB3 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		8382D2F31B97E09700BCFCB3 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		8382D2F61B97E09700BCFCB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		8382D2F81B97E09700BCFCB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8382D2FF1B97EC6600BCFCB3 /* MyTLC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyTLC.entitlements; sourceTree = "<group>"; };
+		8382D3021B98B0D200BCFCB3 /* MyTLC for Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyTLC for Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8382D3051B98B0D200BCFCB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		8382D3091B98B0D200BCFCB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8382D30E1B98B0D200BCFCB3 /* MyTLC for Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MyTLC for Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8382D3131B98B0D200BCFCB3 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		8382D3141B98B0D200BCFCB3 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		8382D3161B98B0D200BCFCB3 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		8382D3171B98B0D200BCFCB3 /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		8382D3191B98B0D200BCFCB3 /* ComplicationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplicationController.h; sourceTree = "<group>"; };
+		8382D31A1B98B0D200BCFCB3 /* ComplicationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplicationController.m; sourceTree = "<group>"; };
+		8382D31C1B98B0D200BCFCB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8382D31E1B98B0D200BCFCB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8382D32A1B98B17B00BCFCB3 /* MyTLC for Watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "MyTLC for Watch.entitlements"; sourceTree = "<group>"; };
+		8382D32B1B98B18800BCFCB3 /* MyTLC for Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "MyTLC for Watch Extension.entitlements"; sourceTree = "<group>"; };
 		83C6A9B91B0A7A310042954D /* mytlcShiftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mytlcShiftViewController.h; sourceTree = "<group>"; };
 		83C6A9BA1B0A7A310042954D /* mytlcShiftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mytlcShiftViewController.m; sourceTree = "<group>"; };
 		83CBCFB21B2950FF003706DA /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		83CBCFC61B29517D003706DA /* MyTLC.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyTLC.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		83CBCFC91B29517D003706DA /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
-		83CBCFCA1B29517D003706DA /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
-		83CBCFCD1B29517D003706DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		83CBCFCF1B29517D003706DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6766E5019B44AB400E3EB11 /* MyTLC Sync.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "MyTLC Sync.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,21 +302,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		03C36E89181AC4C90018AB0A /* Frameworks */ = {
+		8382D2EC1B97E09700BCFCB3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C36E8E181AC4C90018AB0A /* XCTest.framework in Frameworks */,
-				03C36E90181AC4C90018AB0A /* UIKit.framework in Frameworks */,
-				03C36E8F181AC4C90018AB0A /* Foundation.framework in Frameworks */,
+				8382D2F01B97E09700BCFCB3 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		83CBCFC31B29517D003706DA /* Frameworks */ = {
+		8382D30B1B98B0D200BCFCB3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83CBCFC71B29517D003706DA /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +323,7 @@
 		03C36E5F181AC4C90018AB0A = {
 			isa = PBXGroup;
 			children = (
+				833F5E261B9A786400B53013 /* HUD */,
 				8304E6DF1B20F09500DE5706 /* Icon */,
 				8304E6AA1B20EA1000DE5706 /* MBAlertView */,
 				8304E6A51B20E6B300DE5706 /* Images */,
@@ -274,7 +334,9 @@
 				03ED4454184C419F007378B2 /* COPYING */,
 				03C36E71181AC4C90018AB0A /* MyTLC Sync */,
 				03C36E93181AC4C90018AB0A /* MyTLC SyncTests */,
-				83CBCFC81B29517D003706DA /* MyTLC */,
+				8382D2F11B97E09700BCFCB3 /* MyTLC */,
+				8382D3031B98B0D200BCFCB3 /* MyTLC for Watch */,
+				8382D3121B98B0D200BCFCB3 /* MyTLC for Watch Extension */,
 				03C36E6A181AC4C90018AB0A /* Frameworks */,
 				03C36E69181AC4C90018AB0A /* Products */,
 			);
@@ -284,8 +346,9 @@
 			isa = PBXGroup;
 			children = (
 				03C36E68181AC4C90018AB0A /* MyTLC.app */,
-				03C36E8C181AC4C90018AB0A /* MyTLC SyncTests.xctest */,
-				83CBCFC61B29517D003706DA /* MyTLC.appex */,
+				8382D2EF1B97E09700BCFCB3 /* Next TLC Shift.appex */,
+				8382D3021B98B0D200BCFCB3 /* MyTLC for Watch.app */,
+				8382D30E1B98B0D200BCFCB3 /* MyTLC for Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -334,7 +397,6 @@
 				034E9041181D6E8600B9B368 /* mytlcShift.m */,
 				83C6A9B91B0A7A310042954D /* mytlcShiftViewController.h */,
 				83C6A9BA1B0A7A310042954D /* mytlcShiftViewController.m */,
-				8304E7081B20F0A100DE5706 /* Images-2.xcassets */,
 			);
 			path = "MyTLC Sync";
 			sourceTree = "<group>";
@@ -500,6 +562,34 @@
 			path = Icon;
 			sourceTree = "<group>";
 		};
+		8317E8091B98FB420003947B /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				8317E80C1B98FB770003947B /* TableView.h */,
+				8317E80A1B98FB670003947B /* TableView.m */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		833F5E261B9A786400B53013 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				833F5E2C1B9A841000B53013 /* BBY-42.png */,
+				833F5E271B9A786F00B53013 /* MBProgressHUD.h */,
+				833F5E281B9A786F00B53013 /* MBProgressHUD.m */,
+			);
+			name = HUD;
+			sourceTree = "<group>";
+		};
+		836DEE681BACD67B00DA66E5 /* New TableView */ = {
+			isa = PBXGroup;
+			children = (
+				836DEE691BACD69500DA66E5 /* NewTableView.h */,
+				836DEE6A1BACD69500DA66E5 /* NewTableView.m */,
+			);
+			name = "New TableView";
+			sourceTree = "<group>";
+		};
 		837E4D0B1B20113500068963 /* PDKeychainBindingsController */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,73 +601,125 @@
 			path = PDKeychainBindingsController;
 			sourceTree = "<group>";
 		};
-		83CBCFC81B29517D003706DA /* MyTLC */ = {
+		8382D2F11B97E09700BCFCB3 /* MyTLC */ = {
 			isa = PBXGroup;
 			children = (
-				83CBCFC91B29517D003706DA /* TodayViewController.h */,
-				83CBCFCA1B29517D003706DA /* TodayViewController.m */,
-				83CBCFCC1B29517D003706DA /* MainInterface.storyboard */,
-				83CBCFCF1B29517D003706DA /* Info.plist */,
+				8382D2FF1B97EC6600BCFCB3 /* MyTLC.entitlements */,
+				8382D2F21B97E09700BCFCB3 /* TodayViewController.h */,
+				8382D2F31B97E09700BCFCB3 /* TodayViewController.m */,
+				8382D2F51B97E09700BCFCB3 /* MainInterface.storyboard */,
+				8382D2F81B97E09700BCFCB3 /* Info.plist */,
 			);
 			path = MyTLC;
+			sourceTree = "<group>";
+		};
+		8382D3031B98B0D200BCFCB3 /* MyTLC for Watch */ = {
+			isa = PBXGroup;
+			children = (
+				8382D32A1B98B17B00BCFCB3 /* MyTLC for Watch.entitlements */,
+				8382D3041B98B0D200BCFCB3 /* Interface.storyboard */,
+				8382D3091B98B0D200BCFCB3 /* Info.plist */,
+				832A5B421BA3D8160080F44B /* Images.xcassets */,
+			);
+			path = "MyTLC for Watch";
+			sourceTree = "<group>";
+		};
+		8382D3121B98B0D200BCFCB3 /* MyTLC for Watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				836DEE681BACD67B00DA66E5 /* New TableView */,
+				8317E8091B98FB420003947B /* TableView */,
+				8382D32B1B98B18800BCFCB3 /* MyTLC for Watch Extension.entitlements */,
+				8382D3131B98B0D200BCFCB3 /* InterfaceController.h */,
+				8382D3141B98B0D200BCFCB3 /* InterfaceController.m */,
+				8382D3161B98B0D200BCFCB3 /* ExtensionDelegate.h */,
+				8382D3171B98B0D200BCFCB3 /* ExtensionDelegate.m */,
+				8382D3191B98B0D200BCFCB3 /* ComplicationController.h */,
+				8382D31A1B98B0D200BCFCB3 /* ComplicationController.m */,
+				8382D31C1B98B0D200BCFCB3 /* Assets.xcassets */,
+				8382D31E1B98B0D200BCFCB3 /* Info.plist */,
+				836DEE651BACD20000DA66E5 /* NoContentWatchViewController.h */,
+				836DEE661BACD20000DA66E5 /* NoContentWatchViewController.m */,
+				836DEE6C1BACDF2100DA66E5 /* WatchShiftDetailViewController.h */,
+				836DEE6D1BACDF2100DA66E5 /* WatchShiftDetailViewController.m */,
+			);
+			path = "MyTLC for Watch Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		03C36E67181AC4C90018AB0A /* MyTLC Sync */ = {
+		03C36E67181AC4C90018AB0A /* MyTLC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 03C36E9D181AC4C90018AB0A /* Build configuration list for PBXNativeTarget "MyTLC Sync" */;
+			buildConfigurationList = 03C36E9D181AC4C90018AB0A /* Build configuration list for PBXNativeTarget "MyTLC" */;
 			buildPhases = (
 				03C36E64181AC4C90018AB0A /* Sources */,
 				03C36E65181AC4C90018AB0A /* Frameworks */,
 				03C36E66181AC4C90018AB0A /* Resources */,
 				833B38401B0AD2AB004CD033 /* Embed App Extensions */,
+				8382D3291B98B0D300BCFCB3 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				83CBCFD11B29517D003706DA /* PBXTargetDependency */,
+				8382D2FA1B97E09700BCFCB3 /* PBXTargetDependency */,
+				8382D3201B98B0D200BCFCB3 /* PBXTargetDependency */,
 			);
-			name = "MyTLC Sync";
+			name = MyTLC;
 			productName = "MyTLC Sync";
 			productReference = 03C36E68181AC4C90018AB0A /* MyTLC.app */;
 			productType = "com.apple.product-type.application";
 		};
-		03C36E8B181AC4C90018AB0A /* MyTLC SyncTests */ = {
+		8382D2EE1B97E09700BCFCB3 /* Next TLC Shift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 03C36EA0181AC4C90018AB0A /* Build configuration list for PBXNativeTarget "MyTLC SyncTests" */;
+			buildConfigurationList = 8382D2FC1B97E09700BCFCB3 /* Build configuration list for PBXNativeTarget "Next TLC Shift" */;
 			buildPhases = (
-				03C36E88181AC4C90018AB0A /* Sources */,
-				03C36E89181AC4C90018AB0A /* Frameworks */,
-				03C36E8A181AC4C90018AB0A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				03C36E92181AC4C90018AB0A /* PBXTargetDependency */,
-			);
-			name = "MyTLC SyncTests";
-			productName = "MyTLC SyncTests";
-			productReference = 03C36E8C181AC4C90018AB0A /* MyTLC SyncTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		83CBCFC51B29517D003706DA /* MyTLC */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 83CBCFD31B29517E003706DA /* Build configuration list for PBXNativeTarget "MyTLC" */;
-			buildPhases = (
-				83CBCFC21B29517D003706DA /* Sources */,
-				83CBCFC31B29517D003706DA /* Frameworks */,
-				83CBCFC41B29517D003706DA /* Resources */,
+				8382D2EB1B97E09700BCFCB3 /* Sources */,
+				8382D2EC1B97E09700BCFCB3 /* Frameworks */,
+				8382D2ED1B97E09700BCFCB3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MyTLC;
+			name = "Next TLC Shift";
 			productName = MyTLC;
-			productReference = 83CBCFC61B29517D003706DA /* MyTLC.appex */;
+			productReference = 8382D2EF1B97E09700BCFCB3 /* Next TLC Shift.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		8382D3011B98B0D200BCFCB3 /* MyTLC for Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8382D3261B98B0D300BCFCB3 /* Build configuration list for PBXNativeTarget "MyTLC for Watch" */;
+			buildPhases = (
+				8382D3001B98B0D200BCFCB3 /* Resources */,
+				8382D3251B98B0D300BCFCB3 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8382D3111B98B0D200BCFCB3 /* PBXTargetDependency */,
+			);
+			name = "MyTLC for Watch";
+			productName = "MyTLC for Watch";
+			productReference = 8382D3021B98B0D200BCFCB3 /* MyTLC for Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		8382D30D1B98B0D200BCFCB3 /* MyTLC for Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8382D3221B98B0D300BCFCB3 /* Build configuration list for PBXNativeTarget "MyTLC for Watch Extension" */;
+			buildPhases = (
+				8382D30A1B98B0D200BCFCB3 /* Sources */,
+				8382D30B1B98B0D200BCFCB3 /* Frameworks */,
+				8382D30C1B98B0D200BCFCB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MyTLC for Watch Extension";
+			productName = "MyTLC for Watch Extension";
+			productReference = 8382D30E1B98B0D200BCFCB3 /* MyTLC for Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -586,12 +728,15 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = mytlc;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = DrR3d;
 				TargetAttributes = {
 					03C36E67181AC4C90018AB0A = {
 						DevelopmentTeam = BLNK2KSMXB;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -603,13 +748,32 @@
 							};
 						};
 					};
-					03C36E8B181AC4C90018AB0A = {
-						DevelopmentTeam = BLNK2KSMXB;
-						TestTargetID = 03C36E67181AC4C90018AB0A;
-					};
-					83CBCFC51B29517D003706DA = {
+					8382D2EE1B97E09700BCFCB3 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = BLNK2KSMXB;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					8382D3011B98B0D200BCFCB3 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = BLNK2KSMXB;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					8382D30D1B98B0D200BCFCB3 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = BLNK2KSMXB;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -626,9 +790,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				03C36E67181AC4C90018AB0A /* MyTLC Sync */,
-				03C36E8B181AC4C90018AB0A /* MyTLC SyncTests */,
-				83CBCFC51B29517D003706DA /* MyTLC */,
+				03C36E67181AC4C90018AB0A /* MyTLC */,
+				8382D2EE1B97E09700BCFCB3 /* Next TLC Shift */,
+				8382D3011B98B0D200BCFCB3 /* MyTLC for Watch */,
+				8382D30D1B98B0D200BCFCB3 /* MyTLC for Watch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -640,11 +805,11 @@
 			files = (
 				8304E6A91B20E7A900DE5706 /* button-background.png in Resources */,
 				8304E7061B20F09500DE5706 /* iTunesArtwork in Resources */,
-				8304E7091B20F0A100DE5706 /* Images-2.xcassets in Resources */,
 				8304E6F91B20F09500DE5706 /* Icon-76.png in Resources */,
 				8304E7071B20F09500DE5706 /* iTunesArtwork@2x in Resources */,
 				8304E6FF1B20F09500DE5706 /* Icon-Small@2x.png in Resources */,
 				8304E6FD1B20F09500DE5706 /* Icon-Small-50@2x.png in Resources */,
+				833F5E2D1B9A841000B53013 /* BBY-42.png in Resources */,
 				8304E7021B20F09500DE5706 /* Icon-Spotlight-40@2x.png in Resources */,
 				03C36E87181AC4C90018AB0A /* Images.xcassets in Resources */,
 				8304E6F81B20F09500DE5706 /* Icon-72@2x.png in Resources */,
@@ -669,19 +834,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		03C36E8A181AC4C90018AB0A /* Resources */ = {
+		8382D2ED1B97E09700BCFCB3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C36E98181AC4C90018AB0A /* InfoPlist.strings in Resources */,
+				8382D2F71B97E09700BCFCB3 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		83CBCFC41B29517D003706DA /* Resources */ = {
+		8382D3001B98B0D200BCFCB3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83CBCFCE1B29517D003706DA /* MainInterface.storyboard in Resources */,
+				8382D3061B98B0D200BCFCB3 /* Interface.storyboard in Resources */,
+				832A5B431BA3D8160080F44B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8382D30C1B98B0D200BCFCB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8382D31D1B98B0D200BCFCB3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +881,7 @@
 				837E4D101B20113500068963 /* PDKeychainBindings.m in Sources */,
 				03C36E7C181AC4C90018AB0A /* mytlcAppDelegate.m in Sources */,
 				8304E6D21B20EA1000DE5706 /* UIView+Alert.m in Sources */,
+				833F5E291B9A786F00B53013 /* MBProgressHUD.m in Sources */,
 				83C6A9BB1B0A7A310042954D /* mytlcShiftViewController.m in Sources */,
 				034E9042181D6E8600B9B368 /* mytlcShift.m in Sources */,
 				03C36E78181AC4C90018AB0A /* main.m in Sources */,
@@ -726,34 +901,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		03C36E88181AC4C90018AB0A /* Sources */ = {
+		8382D2EB1B97E09700BCFCB3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C36E9A181AC4C90018AB0A /* MyTLC_SyncTests.m in Sources */,
+				8382D2F41B97E09700BCFCB3 /* TodayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		83CBCFC21B29517D003706DA /* Sources */ = {
+		8382D30A1B98B0D200BCFCB3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83CBCFCB1B29517D003706DA /* TodayViewController.m in Sources */,
+				8382D31B1B98B0D200BCFCB3 /* ComplicationController.m in Sources */,
+				8317E80B1B98FB670003947B /* TableView.m in Sources */,
+				836DEE671BACD20000DA66E5 /* NoContentWatchViewController.m in Sources */,
+				8382D3181B98B0D200BCFCB3 /* ExtensionDelegate.m in Sources */,
+				836DEE6B1BACD69500DA66E5 /* NewTableView.m in Sources */,
+				8382D3151B98B0D200BCFCB3 /* InterfaceController.m in Sources */,
+				836DEE6E1BACDF2100DA66E5 /* WatchShiftDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		03C36E92181AC4C90018AB0A /* PBXTargetDependency */ = {
+		8382D2FA1B97E09700BCFCB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 03C36E67181AC4C90018AB0A /* MyTLC Sync */;
-			targetProxy = 03C36E91181AC4C90018AB0A /* PBXContainerItemProxy */;
+			target = 8382D2EE1B97E09700BCFCB3 /* Next TLC Shift */;
+			targetProxy = 8382D2F91B97E09700BCFCB3 /* PBXContainerItemProxy */;
 		};
-		83CBCFD11B29517D003706DA /* PBXTargetDependency */ = {
+		8382D3111B98B0D200BCFCB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 83CBCFC51B29517D003706DA /* MyTLC */;
-			targetProxy = 83CBCFD01B29517D003706DA /* PBXContainerItemProxy */;
+			target = 8382D30D1B98B0D200BCFCB3 /* MyTLC for Watch Extension */;
+			targetProxy = 8382D3101B98B0D200BCFCB3 /* PBXContainerItemProxy */;
+		};
+		8382D3201B98B0D200BCFCB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8382D3011B98B0D200BCFCB3 /* MyTLC for Watch */;
+			targetProxy = 8382D31F1B98B0D200BCFCB3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -782,12 +968,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		83CBCFCC1B29517D003706DA /* MainInterface.storyboard */ = {
+		8382D2F51B97E09700BCFCB3 /* MainInterface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				83CBCFCD1B29517D003706DA /* Base */,
+				8382D2F61B97E09700BCFCB3 /* Base */,
 			);
 			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		8382D3041B98B0D200BCFCB3 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8382D3051B98B0D200BCFCB3 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -809,10 +1003,11 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Djinel Sekosan (UPEC4LGJJB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Djinel Sekosan (UPEC4LGJJB)";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1.2;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -829,7 +1024,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "38ca0ed4-f544-4656-bacb-f7ba5901ed50";
+				PROVISIONING_PROFILE = "a7ea7782-a155-4b30-8542-b3769ba80fb6";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -853,8 +1048,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Djinel Sekosan (UPEC4LGJJB)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Djinel Sekosan (BLNK2KSMXB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Djinel Sekosan (BLNK2KSMXB)";
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1.2;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -867,7 +1062,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "38ca0ed4-f544-4656-bacb-f7ba5901ed50";
+				PROVISIONING_PROFILE = "a7ea7782-a155-4b30-8542-b3769ba80fb6";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -879,16 +1074,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "MyTLC Sync/MyTLC Sync.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Djinel Sekosan (UPEC4LGJJB)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Djinel Sekosan (UPEC4LGJJB)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyTLC Sync/MyTLC Sync-Prefix.pch";
 				INFOPLIST_FILE = "MyTLC Sync/MyTLC Sync-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ctthosting.mytlc-sync";
 				PRODUCT_NAME = MyTLC;
-				PROVISIONING_PROFILE = "40307297-e767-4ba2-a6c0-17fc49e99010";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "";
 				WRAPPER_EXTENSION = app;
@@ -899,75 +1094,30 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "MyTLC Sync/MyTLC Sync.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Djinel Sekosan (BLNK2KSMXB)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Djinel Sekosan (BLNK2KSMXB)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyTLC Sync/MyTLC Sync-Prefix.pch";
 				INFOPLIST_FILE = "MyTLC Sync/MyTLC Sync-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ctthosting.mytlc-sync";
 				PRODUCT_NAME = MyTLC;
-				PROVISIONING_PROFILE = "40307297-e767-4ba2-a6c0-17fc49e99010";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		03C36EA1181AC4C90018AB0A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyTLC Sync.app/MyTLC Sync";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MyTLC Sync/MyTLC Sync-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "MyTLC SyncTests/MyTLC SyncTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		03C36EA2181AC4C90018AB0A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyTLC Sync.app/MyTLC Sync";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MyTLC Sync/MyTLC Sync-Prefix.pch";
-				INFOPLIST_FILE = "MyTLC SyncTests/MyTLC SyncTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-		83CBCFD41B29517E003706DA /* Debug */ = {
+		8382D2FD1B97E09700BCFCB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Djinel Sekosan (UPEC4LGJJB)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Djinel Sekosan (UPEC4LGJJB)";
+				CODE_SIGN_ENTITLEMENTS = MyTLC/MyTLC.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -979,17 +1129,18 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ctthosting.mytlc-sync.MyTLC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "40307297-e767-4ba2-a6c0-17fc49e99010";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		83CBCFD51B29517E003706DA /* Release */ = {
+		8382D2FE1B97E09700BCFCB3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Djinel Sekosan (UPEC4LGJJB)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Djinel Sekosan (UPEC4LGJJB)";
+				CODE_SIGN_ENTITLEMENTS = MyTLC/MyTLC.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1001,8 +1152,117 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ctthosting.mytlc-sync.MyTLC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "40307297-e767-4ba2-a6c0-17fc49e99010";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8382D3231B98B0D300BCFCB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = "MyTLC for Watch Extension/MyTLC for Watch Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Djinel Sekosan (UPEC4LGJJB)";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "MyTLC for Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ctthosting.mytlc-sync.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		8382D3241B98B0D300BCFCB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = "MyTLC for Watch Extension/MyTLC for Watch Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "MyTLC for Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ctthosting.mytlc-sync.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		8382D3271B98B0D300BCFCB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconWatch;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = AppleWatchIcons;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = "MyTLC for Watch/MyTLC for Watch.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Djinel Sekosan (UPEC4LGJJB)";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IBSC_MODULE = MyTLC_for_Watch_Extension;
+				INFOPLIST_FILE = "MyTLC for Watch/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ctthosting.mytlc-sync.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		8382D3281B98B0D300BCFCB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconWatch;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = AppleWatchIcons;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = "MyTLC for Watch/MyTLC for Watch.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Djinel Sekosan (BLNK2KSMXB)";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IBSC_MODULE = MyTLC_for_Watch_Extension;
+				INFOPLIST_FILE = "MyTLC for Watch/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ctthosting.mytlc-sync.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -1018,7 +1278,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		03C36E9D181AC4C90018AB0A /* Build configuration list for PBXNativeTarget "MyTLC Sync" */ = {
+		03C36E9D181AC4C90018AB0A /* Build configuration list for PBXNativeTarget "MyTLC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03C36E9E181AC4C90018AB0A /* Debug */,
@@ -1027,20 +1287,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		03C36EA0181AC4C90018AB0A /* Build configuration list for PBXNativeTarget "MyTLC SyncTests" */ = {
+		8382D2FC1B97E09700BCFCB3 /* Build configuration list for PBXNativeTarget "Next TLC Shift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				03C36EA1181AC4C90018AB0A /* Debug */,
-				03C36EA2181AC4C90018AB0A /* Release */,
+				8382D2FD1B97E09700BCFCB3 /* Debug */,
+				8382D2FE1B97E09700BCFCB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBCFD31B29517E003706DA /* Build configuration list for PBXNativeTarget "MyTLC" */ = {
+		8382D3221B98B0D300BCFCB3 /* Build configuration list for PBXNativeTarget "MyTLC for Watch Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				83CBCFD41B29517E003706DA /* Debug */,
-				83CBCFD51B29517E003706DA /* Release */,
+				8382D3231B98B0D300BCFCB3 /* Debug */,
+				8382D3241B98B0D300BCFCB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8382D3261B98B0D300BCFCB3 /* Build configuration list for PBXNativeTarget "MyTLC for Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8382D3271B98B0D300BCFCB3 /* Debug */,
+				8382D3281B98B0D300BCFCB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

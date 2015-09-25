@@ -43,11 +43,16 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
+    NSLog(@"app will enter foreground");
+    mytlcShiftViewController *view = [[mytlcShiftViewController alloc] init];
+    [view resumeDataFromBackground];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    NSLog(@"app did become active");
     
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 }
@@ -59,13 +64,16 @@
 
 - (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
+    
     NSLog(@"########### Received Backgroudn Fetch ###########");
     
-  
     PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
     //How to retrieve
     NSString *username = [bindings objectForKey:@"tlc_username"];
     NSString *password = [bindings objectForKey:@"tlc_password"];
+    
+    NSLog(@"Got Username \"%@\" and Password \"%@\"", username, password);
+    
     
 
     if([username length] != 0)
@@ -86,7 +94,7 @@
     localNotification.fireDate = [NSDate date];
     localNotification.alertBody = [NSString stringWithFormat:@"Background check ran.\n%@", [dateFormatter stringFromDate:[NSDate date]]];
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    //[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 
     
     //Tell the system that you ar done.

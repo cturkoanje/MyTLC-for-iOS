@@ -216,7 +216,7 @@
 
 - (void) displayAlert:(NSString*) message
 {
-    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"MyTLC Sync" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"MyTLC " message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
     
     [alert show];
 }
@@ -243,7 +243,7 @@
 
     // Gets Build Version from Plist then sets it to label in Settings Config
     NSString *buildVersionNum = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
-    NSMutableString *buildVersion = [[NSMutableString alloc] initWithString:@"MyTLC Sync Version "];
+    NSMutableString *buildVersion = [[NSMutableString alloc] initWithString:@"MyTLC Version "];
     [buildVersion appendString:buildVersionNum];
     lblMyTLCSyncVersion.text = buildVersion;
     

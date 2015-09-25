@@ -21,6 +21,7 @@
 #import "mytlcCalendarHandler.h"
 #import "mytlcShift.h"
 #import <EventKit/EventKit.h>
+@import WatchConnectivity;
 
 @implementation mytlcCalendarHandler
 
@@ -33,14 +34,18 @@ NSString* message = nil;
 {
     NSLog(@"Displaying all shifts....");
     NSMutableArray *shitArray = [[NSMutableArray alloc] init];
+    NSString *store = nil;
     for (mytlcShift* shift in shifts)
     {
         NSLog(@"Creating Shift:\n%@\n%@", shift, [shift department]);
         
         NSMutableDictionary *newShift = [[NSMutableDictionary alloc] init];
         
+        NSArray *parts = [[shift department] componentsSeparatedByString:@"-"];
+        store = [parts objectAtIndex:1];
+        
         NSArray *keys = @[@"department", @"location", @"startDate", @"endDate"];
-        NSArray *values = @[[shift department], @"0000", [shift startDate], [shift endDate]];
+        NSArray *values = @[[parts objectAtIndex:2], [parts objectAtIndex:1], [shift startDate], [shift endDate]];
         
         newShift = [NSMutableDictionary dictionaryWithObjects:values forKeys:keys];
         
@@ -50,11 +55,18 @@ NSString* message = nil;
     }
     
     NSLog(@"Attempting to save the current shifts to NSDefaults: \n\n%@", shitArray);
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.ctthosting.bby.shifts"];
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:shitArray];
     [userDefaults setObject:data forKey:@"currentSavedShifts"];
     [userDefaults setObject:[NSDate date] forKey:@"lastUpdated"];
+    [userDefaults setObject:store forKey:@"storeNumber"];
     [userDefaults synchronize];
+    
+    NSDictionary *applicationDict = @{
+            @"currentSavedShifts" : shitArray,
+    };
+    
+    [[WCSession defaultSession] updateApplicationContext:applicationDict error:nil];
 }
 
 
@@ -312,6 +324,41 @@ NSString* message = nil;
     return newMessageExists;
 }
 
+- (void) parseEmployeeData:(NSString *)data {
+    
+    NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.ctthosting.bby.shifts"];
+    
+    NSRange begin = [data rangeOfString:@"employee_name"];
+    NSString* employeeName = [data substringFromIndex:begin.location + 15];
+    NSRange end = [employeeName rangeOfString:@"</div>"];
+    employeeName = [employeeName substringToIndex:end.location];
+    
+    NSString *firstName = [[employeeName componentsSeparatedByString:@", "] objectAtIndex:1];
+    NSString *lastName = [[employeeName componentsSeparatedByString:@", "] objectAtIndex:0];
+    
+    begin = [data rangeOfString:@"\"message\""];
+    NSString* messageCount = [data substringFromIndex:begin.location + 10];
+    end = [messageCount rangeOfString:@"</span>"];
+    messageCount = [messageCount substringToIndex:end.location];
+    
+    NSString *oldMessageCount = [userDefaults objectForKey:@"messageCount"];
+    
+    if(oldMessageCount != nil && [messageCount intValue] != 0 && ([oldMessageCount intValue] < [messageCount intValue]))
+    {
+        UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+        localNotification.fireDate = [NSDate date];
+        localNotification.alertBody = [NSString stringWithFormat:@"You have %@ new message(s) on TLC.", messageCount];
+        localNotification.timeZone = [NSTimeZone defaultTimeZone];
+        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    }
+    
+    [userDefaults setObject:firstName forKey:@"employeeFirstName"];
+    [userDefaults setObject:lastName forKey:@"employeeLastName"];
+    [userDefaults setObject:messageCount forKey:@"messageCount"];
+    [userDefaults synchronize];
+    
+    NSLog(@"\nEmployee First Name: %@\nEmployee Last Name: %@\nMessage Count: %@", firstName, lastName, messageCount);
+}
 
 /* Handles the parsing of the schedule data */
 - (NSMutableArray*) parseSchedule:(NSString*) data
@@ -320,6 +367,8 @@ NSString* message = nil;
     {
         return nil;
     }
+    
+    [self parseEmployeeData:data];
     
     /* Gets the Previous Month and Year data*/
     
@@ -662,6 +711,8 @@ NSString* message = nil;
     
     if (!data) {
         [self updateProgress:@"Error connecting to MyTLC, do you have a network connection?"];
+        
+        NSLog(@"Data: %@", data);
         
         done = YES;
         

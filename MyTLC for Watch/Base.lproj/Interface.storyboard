@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+    </dependencies>
+    <scenes>
+        <!--MyTLC-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="MyTLC" id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <table alignment="left" id="F9k-UG-NP5">
+                            <items>
+                                <tableRow identifier="NewTableView" id="t9l-uu-T5O" customClass="NewTableView">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="kuy-aB-Eh0">
+                                        <items>
+                                            <group width="30" alignment="left" layout="vertical" id="dV6-gY-zBD">
+                                                <items>
+                                                    <label width="1" height="45" alignment="center" verticalAlignment="center" text="Wed" textAlignment="center" id="GA3-oQ-HF3">
+                                                        <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <group width="64" height="45" alignment="center" verticalAlignment="center" layout="vertical" id="wa7-gL-ciG">
+                                                <items>
+                                                    <label width="74" alignment="center" text="10:00 am" textAlignment="center" id="NcW-Ta-qM7">
+                                                        <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                                    </label>
+                                                    <separator alignment="left" id="wbr-s4-zlM"/>
+                                                    <label alignment="center" verticalAlignment="center" text="5:00 pm" id="VhI-mr-J9P">
+                                                        <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <group width="30" alignment="right" id="FRs-Ye-qJt">
+                                                <items>
+                                                    <label height="45" alignment="center" verticalAlignment="center" text="8.2" textAlignment="center" id="PoA-n7-Gk1">
+                                                        <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="endShiftTime" destination="VhI-mr-J9P" id="XYf-IT-roj"/>
+                                        <outlet property="hoursWorked" destination="PoA-n7-Gk1" id="ZnT-aH-Pzg"/>
+                                        <outlet property="shiftDay" destination="GA3-oQ-HF3" id="xfj-lZ-hpX"/>
+                                        <outlet property="startShiftTime" destination="NcW-Ta-qM7" id="J5h-4x-Lyf"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="mainTable" destination="F9k-UG-NP5" id="ddN-r3-7Ea"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="400" y="535"/>
+        </scene>
+        <!--Shift Detail-->
+        <scene sceneID="f3f-9n-T1M">
+            <objects>
+                <controller identifier="shiftDetailView" title="Shift Detail" hidesWhenLoading="NO" id="KZX-kt-fzp" customClass="WatchShiftDetailViewController">
+                    <items>
+                        <group width="1" alignment="left" verticalAlignment="center" layout="vertical" id="w76-Kx-bbN">
+                            <items>
+                                <group width="1" height="35" alignment="left" id="IXN-U1-IwE">
+                                    <items>
+                                        <label alignment="center" text="Friday, Sep 29" textAlignment="center" numberOfLines="0" id="Hzx-Em-ZUP">
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="20"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" layout="vertical" id="gpW-lp-hid">
+                                    <items>
+                                        <label alignment="center" text="10:00 am" textAlignment="center" id="AUA-er-l0Y">
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="22"/>
+                                        </label>
+                                        <separator width="0.59999999999999998" alignment="center" id="9Zd-05-9Ko"/>
+                                        <label alignment="center" text="5:00 pm" textAlignment="center" id="Rpk-Y6-wep">
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="20"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" height="35" alignment="left" verticalAlignment="bottom" id="KHO-dg-Xqj">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="bottom" text="7 Hours" textAlignment="center" id="nTd-8F-r3S">
+                                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="19"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="endShiftTime" destination="Rpk-Y6-wep" id="fxl-ph-aMO"/>
+                        <outlet property="hoursWorked" destination="nTd-8F-r3S" id="7rE-lu-Tii"/>
+                        <outlet property="shiftDay" destination="Hzx-Em-ZUP" id="orA-7W-rgr"/>
+                        <outlet property="startShiftTime" destination="AUA-er-l0Y" id="hSd-T3-i1X"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="400" y="773"/>
+        </scene>
+        <!--MyTLC-->
+        <scene sceneID="xMy-se-QrD">
+            <objects>
+                <controller identifier="NoWatchContentView" title="MyTLC" hidesWhenLoading="NO" id="4fe-pT-gVz" customClass="NoContentWatchViewController">
+                    <items>
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="ivR-hw-mDP">
+                            <items>
+                                <label alignment="center" text="No Shifts" id="eNJ-OV-i2l">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                                <separator width="0.69999999999999996" alignment="center" verticalAlignment="center" id="sBy-Sg-HaS"/>
+                                <label alignment="center" verticalAlignment="center" text="There are currently no shifts loaded on your watch. Please open the MyTLC App on your iPhone and fetch new schedules." textAlignment="center" numberOfLines="0" id="68b-to-ivR">
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="629" y="535"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.00083137051921811089" green="0.72479904449999255" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+</document>

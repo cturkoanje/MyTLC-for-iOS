@@ -20,6 +20,7 @@
 
 #import <UIKit/UIKit.h>
 #import "mytlcShift.h"
+#import "mytlcShiftViewController.h"
 
 @interface mytlcAppDelegate : UIResponder <UIApplicationDelegate>
 

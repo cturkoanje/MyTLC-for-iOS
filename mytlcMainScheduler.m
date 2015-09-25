@@ -13,7 +13,7 @@
 
 mytlcCalendarHandler* ch2 = nil;
 NSString *lastString = nil;
-BOOL showNotifications2 = NO;
+BOOL showNotifications2 = YES;
 
 - (void)login:(NSString*)username password:(NSString*) password
 {
@@ -71,17 +71,7 @@ BOOL showNotifications2 = NO;
             [UIApplication sharedApplication].applicationIconBadgeNumber = [str intValue];
         }
         
-        /*
-        if([[ch2 getMessage] isEqualToString:@"Added 0 shifts to your calendar"])
-        {
-            UILocalNotification* localNotification = [[UILocalNotification alloc] init];
-            localNotification.fireDate = [NSDate date];
-            localNotification.alertBody = @"LOG: Background refresh ran with no new shifts added.";
-            localNotification.timeZone = [NSTimeZone defaultTimeZone];
-            localNotification.soundName = UILocalNotificationDefaultSoundName;
-            [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-        }
-         */
+        
     }
     
     

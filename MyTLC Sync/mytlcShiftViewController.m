@@ -10,6 +10,13 @@
 #import "mytlcShift.h"
 #import "ShiftTableViewCell.h"
 
+#import "MBProgressHUD.h"
+@import WatchConnectivity;
+@import SystemConfiguration.CaptiveNetwork;
+@import SafariServices;
+
+#define RSSURL @"https://retailapps.bestbuy.com"
+
 @interface mytlcShiftViewController ()
 
 @end
@@ -24,6 +31,40 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    NSLog(@"viewDidAppear");
+}
+
+- (void)appDidBecomeActive:(NSNotification *)notification {
+    NSLog(@"did become active notification");
+}
+
+- (void)appWillEnterForeground:(NSNotification *)notification {
+    NSLog(@"will enter foreground notification");
+}
+
+-(void)resumeDataFromBackground {
+    NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.ctthosting.bby.shifts"];
+    _shifts = [NSKeyedUnarchiver unarchiveObjectWithData:[defaults objectForKey:@"currentSavedShifts"]];
+    
+    NSLog(@"loaded display shifts: \n%@", _shifts);
+    
+    if([_shifts count] == 0)
+    {
+        [_syncButton sendActionsForControlEvents:UIControlEventTouchUpInside];
+        return;
+    }
+    
+    NSDate *lastUpdated = [defaults objectForKey:@"lastUpdated"];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"EEE, MMM d '@' hh:mm a"];
+    
+    NSString *updateString = [NSString stringWithFormat:@"Last Updated: %@", [formatter stringFromDate:lastUpdated]];
+    [_lblLastUpdated setText:updateString];
+    
+    [self generateSections:_shifts];
+    [self.tableView reloadData];
+    [self supportCoreBlueRSS];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -31,7 +72,7 @@
     NSLog(@"Attempting get the last saved shifts");
 
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.ctthosting.bby.shifts"];
     _shifts = [NSKeyedUnarchiver unarchiveObjectWithData:[defaults objectForKey:@"currentSavedShifts"]];
     
     NSLog(@"loaded display shifts: \n%@", _shifts);
@@ -53,6 +94,85 @@
     [self generateSections:_shifts];
     [self.tableView reloadData];
     
+    if ([WCSession isSupported]) {
+        WCSession* session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+    }
+    
+    
+    NSOperationQueue *mainQueue = [NSOperationQueue mainQueue];
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationUserDidTakeScreenshotNotification
+                                                      object:nil
+                                                       queue:mainQueue
+                                                  usingBlock:^(NSNotification *note) {
+                                                      NSLog(@"Did take a screenshot");
+                                                      
+                                                      UIImage *screenShotImage = [self getScreenshot];
+                                                      
+                                                      UIActivityViewController *activityViewController =
+                                                      [[UIActivityViewController alloc] initWithActivityItems:@[screenShotImage]
+                                                                                        applicationActivities:nil];
+                                                      [self presentViewController:activityViewController
+                                                                         animated:YES
+                                                                       completion:^{
+                                                                           [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                                                       }];
+                                                  }];
+    
+    
+    [self supportCoreBlueRSS];
+    
+}
+
+-(void)supportCoreBlueRSS {
+    NSString *ssid = [[self fetchSSIDInfo] objectForKey:@"SSID"];
+    
+    if ([ssid isEqualToString:@"iD Tech - Staff"] || [ssid isEqualToString:@"BBYDemo"] || [ssid isEqualToString:@"BBYDemoFast"]) {
+
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"RSS"
+                                                                 style:UIBarButtonItemStylePlain
+                                                                target:self
+                                                                action:@selector(openRSSView:)];
+        
+        [self.navigationItem setRightBarButtonItem:item animated:YES];
+        
+    }
+    else {
+        NSLog(@"Not on correct WiFi");
+        [self.navigationItem setRightBarButtonItem:nil animated:YES];
+    }
+}
+
+
+- (IBAction)openRSSView:(id)sender {
+    
+    NSString *ssid = [[self fetchSSIDInfo] objectForKey:@"SSID"];
+    if (![ssid isEqualToString:@"iD Tech - Staff"] && ![ssid isEqualToString:@"BBYDemo"] && ![ssid isEqualToString:@"BBYDemoFast"]) {
+        
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"WiFi Error"
+                                                           message:@"To use this feature, you must be connected to BBYDemo or BBYDemoFast"
+                                                          delegate:self
+                                                 cancelButtonTitle:@"OK"
+                                                 otherButtonTitles:nil];
+        [theAlert show];
+    }
+    else{
+    
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0")) {
+        NSLog(@"Is iOS 9 and on WiFi");
+        
+        SFSafariViewController *safariViewController =  [[SFSafariViewController alloc] initWithURL: [NSURL URLWithString:RSSURL]];
+        [self presentViewController:safariViewController animated:YES completion:nil];
+        
+    }
+    else{
+        NSLog(@"Is not iOS 9");
+        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:RSSURL]];
+    }
+        
+    }
 }
 
 -(void)generateSections:(NSArray *)shifts {
@@ -257,6 +377,108 @@
     
     return newCell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    NSDictionary *cShift = [[NSDictionary alloc] init];
+    
+    if(indexPath.section == 0)
+    {
+        cShift = (_thisWeek)[indexPath.row];
+    }
+    else if(indexPath.section == 1)
+    {
+        cShift = (_nextWeek)[indexPath.row];
+    }
+    else if(indexPath.section == 2)
+    {
+        cShift = (_twoWeek)[indexPath.row];
+    }
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"EEE"];
+    
+    NSDateFormatter *formatter2 = [[NSDateFormatter alloc] init];
+    [formatter2 setDateFormat:@"h:mm a"];
+    
+    NSDateFormatter *formatter3 = [[NSDateFormatter alloc] init];
+    [formatter3 setDateFormat:@"MMM d"];
+    
+    UIImage *imageOfShift = [self getImageForShift:tableView indexPath:indexPath];
+    NSString *shiftText = [NSString stringWithFormat:@"My shift is from %@ to %@ on %@, %@.", [formatter2 stringFromDate:[cShift objectForKey:@"startDate"]], [formatter2 stringFromDate:[cShift objectForKey:@"endDate"]], [formatter stringFromDate:[cShift objectForKey:@"startDate"]], [formatter3 stringFromDate:[cShift objectForKey:@"startDate"]]];
+    
+    UIActivityViewController *activityViewController =
+    [[UIActivityViewController alloc] initWithActivityItems:@[imageOfShift, shiftText]
+                                      applicationActivities:nil];
+    [self presentViewController:activityViewController
+                                       animated:YES
+                                     completion:^{
+                                         [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                     }];
+    
+
+    
+    
+}
+
+- (UIImage *)getImageForShift:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
+    
+    CGRect myRect = [tableView rectForRowAtIndexPath:indexPath];
+    CGSize size = CGSizeMake(myRect.size.width,myRect.size.height);
+    UIGraphicsBeginImageContext(size);
+    CGContextRef c = UIGraphicsGetCurrentContext();
+    CGContextTranslateCTM(c, -myRect.origin.x, -myRect.origin.y);
+    [self.view.layer renderInContext:c];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    //UIImageWriteToSavedPhotosAlbum(image, self,nil, NULL);
+    
+    return image;
+}
+
+- (UIImage *)getScreenshot {
+    
+    CGRect myRect = [self.view bounds];
+    UIGraphicsBeginImageContext(myRect.size);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    [[UIColor blackColor] set];
+    CGContextFillRect(ctx, myRect);
+    [self.view.layer renderInContext:ctx];
+    UIImage *viewimage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    
+    //UIImageWriteToSavedPhotosAlbum(viewimage, self,nil, NULL);
+    
+    return viewimage;
+}
+
+
+/** Returns first non-empty SSID network info dictionary.
+ *  @see CNCopyCurrentNetworkInfo */
+- (NSDictionary *)fetchSSIDInfo
+{
+    NSArray *interfaceNames = CFBridgingRelease(CNCopySupportedInterfaces());
+    NSLog(@"%s: Supported interfaces: %@", __func__, interfaceNames);
+    
+    NSDictionary *SSIDInfo;
+    for (NSString *interfaceName in interfaceNames) {
+        SSIDInfo = CFBridgingRelease(
+                                     CNCopyCurrentNetworkInfo((__bridge CFStringRef)interfaceName));
+        NSLog(@"%s: %@ => %@", __func__, interfaceName, SSIDInfo);
+        
+        BOOL isNotEmpty = (SSIDInfo.count > 0);
+        if (isNotEmpty) {
+            break;
+        }
+    }
+    return SSIDInfo;
+}
+
+
 
 /*
 // Override to support conditional editing of the table view.
