@@ -45,8 +45,7 @@
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     
     NSLog(@"app will enter foreground");
-    mytlcShiftViewController *view = [[mytlcShiftViewController alloc] init];
-    [view resumeDataFromBackground];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"performTask" object:@"updateTable"];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -95,10 +94,22 @@
     localNotification.alertBody = [NSString stringWithFormat:@"Background check ran.\n%@", [dateFormatter stringFromDate:[NSDate date]]];
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
     //[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-
     
     //Tell the system that you ar done.
     completionHandler(UIBackgroundFetchResultNewData);
+    
+}
+
+- (void)application:(UIApplication * _Nonnull)application
+performActionForShortcutItem:(UIApplicationShortcutItem * _Nonnull)shortcutItem
+  completionHandler:(void (^ _Nonnull)(BOOL succeeded))completionHandler
+{
+    NSLog(@"performActionForShortcutItem: %@\n", shortcutItem);
+    NSDictionary *itemData = shortcutItem.userInfo;
+    
+    if([[itemData objectForKey:@"actionPerformed"] isEqualToString:@"openRSS"])
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"quickAction" object:@"openRSS"];
+    
     
 }
 

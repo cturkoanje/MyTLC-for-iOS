@@ -26,6 +26,55 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self registerForNotifications];
+}
+
+- (void)registerForNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(openRSSViewButtonless:)
+                                                 name:@"quickAction" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(performTask:)
+                                                 name:@"performTask" object:nil];
+}
+
+/*** Your custom method called on notification ***/
+-(void)performTask:(NSNotification*)_notification {
+    [self resumeDataFromBackground];
+}
+
+/*** Your custom method called on notification ***/
+-(void)openRSSViewButtonless:(NSNotification*)_notification
+{
+    [[self navigationController] popToRootViewControllerAnimated:YES];
+    NSString *ssid = [[self fetchSSIDInfo] objectForKey:@"SSID"];
+    if (![ssid isEqualToString:@"iD Tech - Staff"] && ![ssid isEqualToString:@"BBYDemo"] && ![ssid isEqualToString:@"BBYDemoFast"]) {
+        
+        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"WiFi Error"
+                                                           message:@"To use this feature, you must be connected to BBYDemo or BBYDemoFast"
+                                                          delegate:self
+                                                 cancelButtonTitle:@"OK"
+                                                 otherButtonTitles:nil];
+        [theAlert show];
+    }
+    else{
+        
+        if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0")) {
+            NSLog(@"Is iOS 9 and on WiFi");
+            
+            SFSafariViewController *safariViewController =  [[SFSafariViewController alloc] initWithURL: [NSURL URLWithString:RSSURL]];
+            [self presentViewController:safariViewController animated:YES completion:nil];
+            
+        }
+        else{
+            NSLog(@"Is not iOS 9");
+            
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:RSSURL]];
+        }
+        
+    }
+    
     
 }
 

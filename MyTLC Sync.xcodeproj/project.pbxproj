@@ -85,7 +85,7 @@
 		8382D3181B98B0D200BCFCB3 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8382D3171B98B0D200BCFCB3 /* ExtensionDelegate.m */; };
 		8382D31B1B98B0D200BCFCB3 /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8382D31A1B98B0D200BCFCB3 /* ComplicationController.m */; };
 		8382D31D1B98B0D200BCFCB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8382D31C1B98B0D200BCFCB3 /* Assets.xcassets */; };
-		8382D3211B98B0D200BCFCB3 /* MyTLC for Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8382D3021B98B0D200BCFCB3 /* MyTLC for Watch.app */; };
+		8382D3211B98B0D200BCFCB3 /* My TLC.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8382D3021B98B0D200BCFCB3 /* My TLC.app */; };
 		83C6A9BB1B0A7A310042954D /* mytlcShiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C6A9BA1B0A7A310042954D /* mytlcShiftViewController.m */; };
 		D634E6AC19B4B3210094F67E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03252E511829C6A7001AF9E1 /* Security.framework */; };
 /* End PBXBuildFile section */
@@ -143,7 +143,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				8382D3211B98B0D200BCFCB3 /* MyTLC for Watch.app in Embed Watch Content */,
+				8382D3211B98B0D200BCFCB3 /* My TLC.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,7 +269,7 @@
 		8382D2F61B97E09700BCFCB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8382D2F81B97E09700BCFCB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8382D2FF1B97EC6600BCFCB3 /* MyTLC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyTLC.entitlements; sourceTree = "<group>"; };
-		8382D3021B98B0D200BCFCB3 /* MyTLC for Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyTLC for Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8382D3021B98B0D200BCFCB3 /* My TLC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My TLC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8382D3051B98B0D200BCFCB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		8382D3091B98B0D200BCFCB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8382D30E1B98B0D200BCFCB3 /* MyTLC for Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MyTLC for Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -347,7 +347,7 @@
 			children = (
 				03C36E68181AC4C90018AB0A /* MyTLC.app */,
 				8382D2EF1B97E09700BCFCB3 /* Next TLC Shift.appex */,
-				8382D3021B98B0D200BCFCB3 /* MyTLC for Watch.app */,
+				8382D3021B98B0D200BCFCB3 /* My TLC.app */,
 				8382D30E1B98B0D200BCFCB3 /* MyTLC for Watch Extension.appex */,
 			);
 			name = Products;
@@ -687,9 +687,9 @@
 			productReference = 8382D2EF1B97E09700BCFCB3 /* Next TLC Shift.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		8382D3011B98B0D200BCFCB3 /* MyTLC for Watch */ = {
+		8382D3011B98B0D200BCFCB3 /* My TLC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8382D3261B98B0D300BCFCB3 /* Build configuration list for PBXNativeTarget "MyTLC for Watch" */;
+			buildConfigurationList = 8382D3261B98B0D300BCFCB3 /* Build configuration list for PBXNativeTarget "My TLC" */;
 			buildPhases = (
 				8382D3001B98B0D200BCFCB3 /* Resources */,
 				8382D3251B98B0D300BCFCB3 /* Embed App Extensions */,
@@ -699,9 +699,9 @@
 			dependencies = (
 				8382D3111B98B0D200BCFCB3 /* PBXTargetDependency */,
 			);
-			name = "MyTLC for Watch";
+			name = "My TLC";
 			productName = "MyTLC for Watch";
-			productReference = 8382D3021B98B0D200BCFCB3 /* MyTLC for Watch.app */;
+			productReference = 8382D3021B98B0D200BCFCB3 /* My TLC.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		8382D30D1B98B0D200BCFCB3 /* MyTLC for Watch Extension */ = {
@@ -792,7 +792,7 @@
 			targets = (
 				03C36E67181AC4C90018AB0A /* MyTLC */,
 				8382D2EE1B97E09700BCFCB3 /* Next TLC Shift */,
-				8382D3011B98B0D200BCFCB3 /* MyTLC for Watch */,
+				8382D3011B98B0D200BCFCB3 /* My TLC */,
 				8382D30D1B98B0D200BCFCB3 /* MyTLC for Watch Extension */,
 			);
 		};
@@ -938,7 +938,7 @@
 		};
 		8382D3201B98B0D200BCFCB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8382D3011B98B0D200BCFCB3 /* MyTLC for Watch */;
+			target = 8382D3011B98B0D200BCFCB3 /* My TLC */;
 			targetProxy = 8382D31F1B98B0D200BCFCB3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1305,7 +1305,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8382D3261B98B0D300BCFCB3 /* Build configuration list for PBXNativeTarget "MyTLC for Watch" */ = {
+		8382D3261B98B0D300BCFCB3 /* Build configuration list for PBXNativeTarget "My TLC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8382D3271B98B0D300BCFCB3 /* Debug */,
