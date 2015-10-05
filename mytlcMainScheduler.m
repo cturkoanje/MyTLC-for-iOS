@@ -13,7 +13,7 @@
 
 mytlcCalendarHandler* ch2 = nil;
 NSString *lastString = nil;
-BOOL showNotifications2 = YES;
+BOOL showNotifications2 = NO;
 
 - (void)login:(NSString*)username password:(NSString*) password
 {
