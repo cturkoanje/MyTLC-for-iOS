@@ -31,4 +31,6 @@
 - (IBAction)closeView:(id)sender;
 -(void)resumeDataFromBackground;
 
+-(IBAction)openSyncPage:(id)sender;
+
 @end

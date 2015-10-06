@@ -27,6 +27,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self registerForNotifications];
+    
+    //self.tableView.backgroundView = [UIView new];
+    //self.tableView.backgroundView.backgroundColor = backGrroundColor;
+    
+    [_syncButton addTarget:self action:@selector(openSyncPage:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)registerForNotifications
@@ -162,11 +167,21 @@
                                                       UIActivityViewController *activityViewController =
                                                       [[UIActivityViewController alloc] initWithActivityItems:@[screenShotImage]
                                                                                         applicationActivities:nil];
-                                                      [self presentViewController:activityViewController
-                                                                         animated:YES
-                                                                       completion:^{
-                                                                           [MBProgressHUD hideHUDForView:self.view animated:YES];
-                                                                       }];
+                                                      
+                                                      
+                                                      //if iPhone
+                                                      if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+                                                          [self presentViewController:activityViewController animated:YES completion:nil];
+                                                      }
+                                                      //if iPad
+                                                      else {
+                                                          // Change Rect to position Popover
+                                                          UIPopoverController *popup = [[UIPopoverController alloc] initWithContentViewController:activityViewController];
+                                                          
+                                                          [popup presentPopoverFromRect:CGRectMake(self.view.frame.size.width/2, self.view.frame.size.height/4, 0, 0)inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+                                                      }
+                                                      
+    
                                                   }];
     
     
@@ -345,6 +360,9 @@
         newCell = [nib objectAtIndex:0];
     }
     
+    UIColor *backGrroundColor = [[UIColor alloc] init];
+    backGrroundColor = [UIColor colorWithRed:58.0 green:58.0 blue:59.0 alpha:0.03];
+    
     
     
     
@@ -360,12 +378,21 @@
     cell.textLabel.text = @"aaa";
     //return cell;
     
-    cell.backgroundColor = [UIColor colorWithRed:28.0 green:28.0 blue:28.0 alpha:0.03];
+    //cell.contentView.backgroundColor = backGrroundColor;
+    
+    cell.contentView.backgroundColor = backGrroundColor;
+    cell.backgroundView.backgroundColor = backGrroundColor;
+    
     cell.textLabel.backgroundColor = [UIColor clearColor];
+    cell.backgroundColor = cell.contentView.backgroundColor;
     cell.detailTextLabel.backgroundColor = [UIColor clearColor];
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.detailTextLabel.textColor = [UIColor whiteColor];
+    cell.backgroundColor = cell.backgroundColor;
     ////
+    
+    [[UITableViewCell appearance] setBackgroundColor:backGrroundColor];
+    [cell setBackgroundColor:backGrroundColor];
     
         
     NSDictionary *cShift = [[NSDictionary alloc] init];
@@ -430,7 +457,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     NSDictionary *cShift = [[NSDictionary alloc] init];
     
@@ -459,14 +485,27 @@
     UIImage *imageOfShift = [self getImageForShift:tableView indexPath:indexPath];
     NSString *shiftText = [NSString stringWithFormat:@"My shift is from %@ to %@ on %@, %@.", [formatter2 stringFromDate:[cShift objectForKey:@"startDate"]], [formatter2 stringFromDate:[cShift objectForKey:@"endDate"]], [formatter stringFromDate:[cShift objectForKey:@"startDate"]], [formatter3 stringFromDate:[cShift objectForKey:@"startDate"]]];
     
+    
     UIActivityViewController *activityViewController =
     [[UIActivityViewController alloc] initWithActivityItems:@[imageOfShift, shiftText]
                                       applicationActivities:nil];
-    [self presentViewController:activityViewController
-                                       animated:YES
-                                     completion:^{
-                                         [MBProgressHUD hideHUDForView:self.view animated:YES];
-                                     }];
+    
+    
+    //if iPhone
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        [self presentViewController:activityViewController animated:YES completion:nil];
+    }
+    //if iPad
+    else {
+        // Change Rect to position Popover
+        UIPopoverController *popup = [[UIPopoverController alloc] initWithContentViewController:activityViewController];
+        
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        CGRect rect=CGRectMake(cell.bounds.origin.x+600, cell.bounds.origin.y+10, 50, 30);
+        [popup presentPopoverFromRect:rect inView:cell permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
+    
+    
     
 
     
@@ -527,6 +566,15 @@
     return SSIDInfo;
 }
 
+
+/**
+ Open Sync Page
+ */
+-(IBAction)openSyncPage:(id)sender
+{
+    NSLog(@"Tapped sync");
+    
+}
 
 
 /*

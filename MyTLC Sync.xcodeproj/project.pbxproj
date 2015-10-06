@@ -86,6 +86,8 @@
 		8382D31B1B98B0D200BCFCB3 /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8382D31A1B98B0D200BCFCB3 /* ComplicationController.m */; };
 		8382D31D1B98B0D200BCFCB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8382D31C1B98B0D200BCFCB3 /* Assets.xcassets */; };
 		8382D3211B98B0D200BCFCB3 /* My TLC.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8382D3021B98B0D200BCFCB3 /* My TLC.app */; };
+		83B149581BC34A94008AF86B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B149571BC34A94008AF86B /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		83B1495B1BC354C3008AF86B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B149591BC354C3008AF86B /* Main_iPad.storyboard */; settings = {ASSET_TAGS = (); }; };
 		83C6A9BB1B0A7A310042954D /* mytlcShiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C6A9BA1B0A7A310042954D /* mytlcShiftViewController.m */; };
 		D634E6AC19B4B3210094F67E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03252E511829C6A7001AF9E1 /* Security.framework */; };
 /* End PBXBuildFile section */
@@ -283,6 +285,8 @@
 		8382D31E1B98B0D200BCFCB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8382D32A1B98B17B00BCFCB3 /* MyTLC for Watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "MyTLC for Watch.entitlements"; sourceTree = "<group>"; };
 		8382D32B1B98B18800BCFCB3 /* MyTLC for Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "MyTLC for Watch Extension.entitlements"; sourceTree = "<group>"; };
+		83B149571BC34A94008AF86B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		83B1495A1BC354C3008AF86B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		83C6A9B91B0A7A310042954D /* mytlcShiftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mytlcShiftViewController.h; sourceTree = "<group>"; };
 		83C6A9BA1B0A7A310042954D /* mytlcShiftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mytlcShiftViewController.m; sourceTree = "<group>"; };
 		83CBCFB21B2950FF003706DA /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -323,6 +327,7 @@
 		03C36E5F181AC4C90018AB0A = {
 			isa = PBXGroup;
 			children = (
+				83B149571BC34A94008AF86B /* Launch Screen.storyboard */,
 				833F5E261B9A786400B53013 /* HUD */,
 				8304E6DF1B20F09500DE5706 /* Icon */,
 				8304E6AA1B20EA1000DE5706 /* MBAlertView */,
@@ -370,8 +375,9 @@
 		03C36E71181AC4C90018AB0A /* MyTLC Sync */ = {
 			isa = PBXGroup;
 			children = (
-				D6766E5019B44AB400E3EB11 /* MyTLC Sync.entitlements */,
+				83B149591BC354C3008AF86B /* Main_iPad.storyboard */,
 				03C36E7D181AC4C90018AB0A /* Main_iPhone.storyboard */,
+				D6766E5019B44AB400E3EB11 /* MyTLC Sync.entitlements */,
 				03C36E86181AC4C90018AB0A /* Images.xcassets */,
 				03C36E72181AC4C90018AB0A /* Supporting Files */,
 				03C36EA3181ACD560018AB0A /* Shift.xcdatamodeld */,
@@ -818,6 +824,7 @@
 				8304E6F41B20F09500DE5706 /* Icon-60.png in Resources */,
 				8304E6FE1B20F09500DE5706 /* Icon-Small.png in Resources */,
 				8304E6F71B20F09500DE5706 /* Icon-72.png in Resources */,
+				83B1495B1BC354C3008AF86B /* Main_iPad.storyboard in Resources */,
 				8304E7041B20F09500DE5706 /* Icon.png in Resources */,
 				03C36E7F181AC4C90018AB0A /* Main_iPhone.storyboard in Resources */,
 				8304E7011B20F09500DE5706 /* Icon-Spotlight-40.png in Resources */,
@@ -828,6 +835,7 @@
 				8304E7051B20F09500DE5706 /* Icon@2x.png in Resources */,
 				8304E6F61B20F09500DE5706 /* Icon-60@3x.png in Resources */,
 				03ED4455184C419F007378B2 /* COPYING in Resources */,
+				83B149581BC34A94008AF86B /* Launch Screen.storyboard in Resources */,
 				03C36E76181AC4C90018AB0A /* InfoPlist.strings in Resources */,
 				8304E7001B20F09500DE5706 /* Icon-Small@3x.png in Resources */,
 				8304E6A71B20E6BE00DE5706 /* iPhone-icon.png in Resources */,
@@ -984,6 +992,14 @@
 			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
+		83B149591BC354C3008AF86B /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83B1495A1BC354C3008AF86B /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1084,7 +1100,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ctthosting.mytlc-sync";
 				PRODUCT_NAME = MyTLC;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1105,7 +1121,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ctthosting.mytlc-sync";
 				PRODUCT_NAME = MyTLC;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "";
 				WRAPPER_EXTENSION = app;
 			};
