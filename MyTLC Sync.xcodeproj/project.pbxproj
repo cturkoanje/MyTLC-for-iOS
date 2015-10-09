@@ -86,8 +86,12 @@
 		8382D31B1B98B0D200BCFCB3 /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8382D31A1B98B0D200BCFCB3 /* ComplicationController.m */; };
 		8382D31D1B98B0D200BCFCB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8382D31C1B98B0D200BCFCB3 /* Assets.xcassets */; };
 		8382D3211B98B0D200BCFCB3 /* My TLC.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8382D3021B98B0D200BCFCB3 /* My TLC.app */; };
-		83B149581BC34A94008AF86B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B149571BC34A94008AF86B /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		83B1495B1BC354C3008AF86B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B149591BC354C3008AF86B /* Main_iPad.storyboard */; settings = {ASSET_TAGS = (); }; };
+		838B8BB31BC60BB90054ECAA /* InventoryWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 838B8BB11BC60BB90054ECAA /* InventoryWebViewController.m */; };
+		838B8BB41BC60BB90054ECAA /* InventoryWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 838B8BB21BC60BB90054ECAA /* InventoryWebViewController.xib */; };
+		83B149581BC34A94008AF86B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B149571BC34A94008AF86B /* Launch Screen.storyboard */; };
+		83B1495B1BC354C3008AF86B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B149591BC354C3008AF86B /* Main_iPad.storyboard */; };
+		83B149621BC35D7D008AF86B /* BarcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B149601BC35D7D008AF86B /* BarcodeViewController.m */; };
+		83B149631BC35D7D008AF86B /* BarcodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83B149611BC35D7D008AF86B /* BarcodeViewController.xib */; };
 		83C6A9BB1B0A7A310042954D /* mytlcShiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C6A9BA1B0A7A310042954D /* mytlcShiftViewController.m */; };
 		D634E6AC19B4B3210094F67E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03252E511829C6A7001AF9E1 /* Security.framework */; };
 /* End PBXBuildFile section */
@@ -285,8 +289,14 @@
 		8382D31E1B98B0D200BCFCB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8382D32A1B98B17B00BCFCB3 /* MyTLC for Watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "MyTLC for Watch.entitlements"; sourceTree = "<group>"; };
 		8382D32B1B98B18800BCFCB3 /* MyTLC for Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "MyTLC for Watch Extension.entitlements"; sourceTree = "<group>"; };
+		838B8BB01BC60BB90054ECAA /* InventoryWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InventoryWebViewController.h; path = InventoryWebView/InventoryWebViewController.h; sourceTree = "<group>"; };
+		838B8BB11BC60BB90054ECAA /* InventoryWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InventoryWebViewController.m; path = InventoryWebView/InventoryWebViewController.m; sourceTree = "<group>"; };
+		838B8BB21BC60BB90054ECAA /* InventoryWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InventoryWebViewController.xib; path = InventoryWebView/InventoryWebViewController.xib; sourceTree = "<group>"; };
 		83B149571BC34A94008AF86B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		83B1495A1BC354C3008AF86B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		83B1495F1BC35D7D008AF86B /* BarcodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarcodeViewController.h; path = BarcodeScannerView/BarcodeViewController.h; sourceTree = "<group>"; };
+		83B149601BC35D7D008AF86B /* BarcodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarcodeViewController.m; path = BarcodeScannerView/BarcodeViewController.m; sourceTree = "<group>"; };
+		83B149611BC35D7D008AF86B /* BarcodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BarcodeViewController.xib; path = BarcodeScannerView/BarcodeViewController.xib; sourceTree = "<group>"; };
 		83C6A9B91B0A7A310042954D /* mytlcShiftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mytlcShiftViewController.h; sourceTree = "<group>"; };
 		83C6A9BA1B0A7A310042954D /* mytlcShiftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mytlcShiftViewController.m; sourceTree = "<group>"; };
 		83CBCFB21B2950FF003706DA /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -327,6 +337,8 @@
 		03C36E5F181AC4C90018AB0A = {
 			isa = PBXGroup;
 			children = (
+				838B8BAF1BC60B6C0054ECAA /* InventoryWebView */,
+				83B1495C1BC35CFC008AF86B /* BarcodeScannerView */,
 				83B149571BC34A94008AF86B /* Launch Screen.storyboard */,
 				833F5E261B9A786400B53013 /* HUD */,
 				8304E6DF1B20F09500DE5706 /* Icon */,
@@ -652,6 +664,26 @@
 			path = "MyTLC for Watch Extension";
 			sourceTree = "<group>";
 		};
+		838B8BAF1BC60B6C0054ECAA /* InventoryWebView */ = {
+			isa = PBXGroup;
+			children = (
+				838B8BB01BC60BB90054ECAA /* InventoryWebViewController.h */,
+				838B8BB11BC60BB90054ECAA /* InventoryWebViewController.m */,
+				838B8BB21BC60BB90054ECAA /* InventoryWebViewController.xib */,
+			);
+			name = InventoryWebView;
+			sourceTree = "<group>";
+		};
+		83B1495C1BC35CFC008AF86B /* BarcodeScannerView */ = {
+			isa = PBXGroup;
+			children = (
+				83B1495F1BC35D7D008AF86B /* BarcodeViewController.h */,
+				83B149601BC35D7D008AF86B /* BarcodeViewController.m */,
+				83B149611BC35D7D008AF86B /* BarcodeViewController.xib */,
+			);
+			name = BarcodeScannerView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -833,7 +865,9 @@
 				8304E7031B20F09500DE5706 /* Icon-Spotlight-40@3x.png in Resources */,
 				8304E6F51B20F09500DE5706 /* Icon-60@2x.png in Resources */,
 				8304E7051B20F09500DE5706 /* Icon@2x.png in Resources */,
+				83B149631BC35D7D008AF86B /* BarcodeViewController.xib in Resources */,
 				8304E6F61B20F09500DE5706 /* Icon-60@3x.png in Resources */,
+				838B8BB41BC60BB90054ECAA /* InventoryWebViewController.xib in Resources */,
 				03ED4455184C419F007378B2 /* COPYING in Resources */,
 				83B149581BC34A94008AF86B /* Launch Screen.storyboard in Resources */,
 				03C36E76181AC4C90018AB0A /* InfoPlist.strings in Resources */,
@@ -882,6 +916,7 @@
 				03BC3239186FBCBD0099D416 /* mytlcEventTitleViewController.m in Sources */,
 				03675A91181AF49D00FEB41E /* mytlcCalendarHandler.m in Sources */,
 				03E47607182C0B4C0089797A /* mytlcSettingsTableViewController.m in Sources */,
+				838B8BB31BC60BB90054ECAA /* InventoryWebViewController.m in Sources */,
 				03C8AE86183AC70100FB1304 /* mytlcAddressViewController.m in Sources */,
 				8304E6D31B20EA1000DE5706 /* MBAlertView.m in Sources */,
 				8304E6DE1B20EA1000DE5706 /* MBAlertAbstract.m in Sources */,
@@ -895,6 +930,7 @@
 				03C36E78181AC4C90018AB0A /* main.m in Sources */,
 				8304E6DA1B20EA1000DE5706 /* MBFlatAlertView.m in Sources */,
 				837E4D161B201A9300068963 /* mytlcMainScheduler.m in Sources */,
+				83B149621BC35D7D008AF86B /* BarcodeViewController.m in Sources */,
 				8304E6D51B20EA1000DE5706 /* MBAlertViewItem.m in Sources */,
 				8304E6D91B20EA1000DE5706 /* MBFlatAlertButton.m in Sources */,
 				8304E6D71B20EA1000DE5706 /* UIView+Autolayout.m in Sources */,

@@ -11,6 +11,10 @@
 #import "ShiftTableViewCell.h"
 
 #import "MBProgressHUD.h"
+
+#import "BarcodeViewController.h"
+#import "InventoryWebViewController.h"
+
 @import WatchConnectivity;
 @import SystemConfiguration.CaptiveNetwork;
 @import SafariServices;
@@ -31,7 +35,8 @@
     //self.tableView.backgroundView = [UIView new];
     //self.tableView.backgroundView.backgroundColor = backGrroundColor;
     
-    [_syncButton addTarget:self action:@selector(openSyncPage:) forControlEvents:UIControlEventTouchUpInside];
+
+    
 }
 
 - (void)registerForNotifications
@@ -47,6 +52,15 @@
 /*** Your custom method called on notification ***/
 -(void)performTask:(NSNotification*)_notification {
     [self resumeDataFromBackground];
+}
+
+-(void)openBarcodeScanner:(id)sender {
+
+    
+    UIViewController *viewController = [[InventoryWebViewController alloc] initWithNibName:@"InventoryWebViewController" bundle:nil];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    
+    [self presentViewController:navController animated:YES completion:nil];
 }
 
 /*** Your custom method called on notification ***/
@@ -65,11 +79,12 @@
     }
     else{
         
-        if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0")) {
-            NSLog(@"Is iOS 9 and on WiFi");
+        if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")) {
+            NSLog(@"Is iOS 8 and on WiFi");
             
-            SFSafariViewController *safariViewController =  [[SFSafariViewController alloc] initWithURL: [NSURL URLWithString:RSSURL]];
-            [self presentViewController:safariViewController animated:YES completion:nil];
+            //SFSafariViewController *safariViewController =  [[SFSafariViewController alloc] initWithURL: [NSURL URLWithString:RSSURL]];
+            //[self presentViewController:safariViewController animated:YES completion:nil];
+            [self openBarcodeScanner:nil];
             
         }
         else{
@@ -197,7 +212,7 @@
         UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"RSS"
                                                                  style:UIBarButtonItemStylePlain
                                                                 target:self
-                                                                action:@selector(openRSSView:)];
+                                                                action:@selector(openBarcodeScanner:)];
         
         [self.navigationItem setRightBarButtonItem:item animated:YES];
         
@@ -205,6 +220,15 @@
     else {
         NSLog(@"Not on correct WiFi");
         [self.navigationItem setRightBarButtonItem:nil animated:YES];
+        
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Beta RSS"
+                                                                 style:UIBarButtonItemStylePlain
+                                                                target:self
+                                                                action:@selector(openBarcodeScanner:)];
+        
+        [self.navigationItem setRightBarButtonItem:item animated:YES];
+        
+        
     }
 }
 
