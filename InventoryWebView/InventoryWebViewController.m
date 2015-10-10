@@ -46,7 +46,7 @@
     _webView.navigationDelegate = self;
     [_webView addObserver:self forKeyPath:@"loading" options:NSKeyValueObservingOptionNew context:nil];
     
-    //NSURL *nsurl=[NSURL URLWithString:@"http://beta.ctthosting.com/rss/InventoryView.html"];
+    //NSURL *nsurl=[NSURL URLWithString:@"http://beta.ctthosting.com/InventoryView.html"];
     NSURL *nsurl=[NSURL URLWithString:@"https://retailapps.bestbuy.com/"];
     
     NSURLRequest *nsrequest=[NSURLRequest requestWithURL:nsurl];
@@ -56,6 +56,18 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(gotBarcodeData:)
                                                  name:@"barcodeDismiss" object:nil];
+}
+
+- (void)viewDidLayoutSubviews {
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    NSLog(@"viewDidLayoutSubviews Screen Size: %f, %f", screenRect.size.width, screenRect.size.height);
+    NSLog(@"viewDidLayoutSubviews View Size: %f, %f", self.view.frame.size.width, self.view.frame.size.height);
+    NSLog(@"viewDidLayoutSubviews SuperView Size: %f, %f", self.view.superview.frame.size.width, self.view.superview.frame.size.height);
+    NSLog(@"viewDidLayoutSubviews View Bounds Size: %f, %f", self.view.bounds.size.width, self.view.bounds.size.height);
+    
+    _webView.frame = self.view.bounds;
+    
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath
@@ -91,13 +103,18 @@
 
 -(void)openBarcodeScanner:(id)sender {
     BarcodeViewController * bc = [[BarcodeViewController alloc] init];
+    bc.modalPresentationStyle = UIModalPresentationFormSheet;
     [self presentViewController:bc animated:YES completion:nil];
 }
 
 -(void)gotBarcodeData:(NSNotification *)notice{
     NSDictionary *data = [notice object];
     
-    NSString *js = [NSString stringWithFormat:@"$(\"#SkuForCurrentStore\").val(\"%@\");$(\"#StoreNoForCurrentStore\").val(\"%@\");", [data objectForKey:@"sku"], [data objectForKey:@"store"]];
+    NSString *js = [NSString stringWithFormat:@"$(\"#SkuForCurrentStore\").val(\"%@\");$(\"#StoreNoForCurrentStore\").val(\"%@\");$('#SearchCurrentStore').click();", [data objectForKey:@"sku"], [data objectForKey:@"store"]];
+    
+    if([[NSString stringWithFormat:@"%@", [data objectForKey:@"sku"]] length] != 7 ||
+       [[NSString stringWithFormat:@"%@", [data objectForKey:@"store"]] length] < 3)
+        js = [NSString stringWithFormat:@"$(\"#SkuForCurrentStore\").val(\"%@\");$(\"#StoreNoForCurrentStore\").val(\"%@\");", [data objectForKey:@"sku"], [data objectForKey:@"store"]];
     
     NSLog(@"JS String: %@", js);
     

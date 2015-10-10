@@ -25,10 +25,44 @@
 
 @implementation BarcodeViewController
 
+- (void)viewDidLayoutSubviews {
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    NSLog(@"viewDidLayoutSubviews Screen Size: %f, %f", screenRect.size.width, screenRect.size.height);
+    NSLog(@"viewDidLayoutSubviews View Size: %f, %f", self.view.frame.size.width, self.view.frame.size.height);
+    NSLog(@"viewDidLayoutSubviews SuperView Size: %f, %f", self.view.superview.frame.size.width, self.view.superview.frame.size.height);
+    NSLog(@"viewDidLayoutSubviews View Bounds Size: %f, %f", self.view.bounds.size.width, self.view.bounds.size.height);
+    
+    CGRect size = self.view.bounds;
+    
+    if(self.view.bounds.size.width/self.view.bounds.size.height < 0.55)
+        
+        if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad )
+        {
+            size.size.height = size.size.width;
+        }
+
+    
+    _prevLayer.frame = size;
+    
+    NSLog(@"Frame size: %f, %f", _prevLayer.frame.size.width, _prevLayer.frame.size.height);
+    
+    
+    _label.frame = CGRectMake(0, self.view.bounds.size.height - 40, self.view.bounds.size.width, 40);
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
+    
+    NSLog(@"Screen Size: %f, %f", screenRect.size.width, screenRect.size.height);
+    NSLog(@"View Size: %f, %f", self.view.frame.size.width, self.view.frame.size.height);
+    NSLog(@"SuperView Size: %f, %f", self.view.superview.frame.size.width, self.view.superview.frame.size.height);
+    NSLog(@"View Bounds Size: %f, %f", self.view.bounds.size.width, self.view.bounds.size.height);
+ 
+
     
     _highlightView = [[UIView alloc] init];
     _highlightView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin;

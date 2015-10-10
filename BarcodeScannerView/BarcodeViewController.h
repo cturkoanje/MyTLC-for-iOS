@@ -10,5 +10,6 @@
 
 @interface BarcodeViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIView *cameraView;
+@property (weak, nonatomic) IBOutlet UIView *cameraViewTest;
 
 @end

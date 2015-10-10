@@ -59,7 +59,7 @@
     
     UIViewController *viewController = [[InventoryWebViewController alloc] initWithNibName:@"InventoryWebViewController" bundle:nil];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    
+    navController.modalPresentationStyle = UIModalPresentationFormSheet;
     [self presentViewController:navController animated:YES completion:nil];
 }
 
