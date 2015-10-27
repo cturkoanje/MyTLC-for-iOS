@@ -77,7 +77,7 @@
     
     if ([keyPath isEqual:@"loading"]) {
         NSString *email = @"christian.turkoanje@bestbuy.com";
-        NSString *password = @"Android7";
+        NSString *password = @"XXXXXXXXXXXXX";
         
         NSString *jslogin = [NSString stringWithFormat:@"if($(\"#EmailId\")){$(\"#EmailId\").val(\"%@\");$(\"#Password\").val(\"%@\");$('input[type=\"submit\"]').click();}", email, password];
         
