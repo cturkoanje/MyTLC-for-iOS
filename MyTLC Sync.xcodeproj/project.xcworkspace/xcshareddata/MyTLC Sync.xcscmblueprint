@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6FAC5CEB53B0BCE867D7CCDAE7335D4B0569A46D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "23A3736D-54F6-4D64-9FC9-CC57A043AB47" : 0,
+    "6FAC5CEB53B0BCE867D7CCDAE7335D4B0569A46D" : 0,
+    "341A3BEFA6F5CBA97A6E61060189B4929F475B1D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2FF73587-903E-469A-A11B-D51E1DCB2F74",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "23A3736D-54F6-4D64-9FC9-CC57A043AB47" : "MyTLC Sync",
+    "6FAC5CEB53B0BCE867D7CCDAE7335D4B0569A46D" : "iOSMyTLCSyncv2-master%20(original)\/",
+    "341A3BEFA6F5CBA97A6E61060189B4929F475B1D" : "iOSMyTLCSyncv2"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MyTLC Sync",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MyTLC Sync.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ImDevinC\/iOSMyTLCSyncv2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "23A3736D-54F6-4D64-9FC9-CC57A043AB47"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ECLIPS3\/iOSMyTLCSyncv2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "341A3BEFA6F5CBA97A6E61060189B4929F475B1D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/cturkoanje\/MyTLC-for-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6FAC5CEB53B0BCE867D7CCDAE7335D4B0569A46D"
+    }
+  ]
+}
