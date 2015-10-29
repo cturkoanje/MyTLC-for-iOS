@@ -19,11 +19,13 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "PDKeychainBindings.h"
 
 @interface mytlcSettingsTableViewController : UITableViewController
 
 @property NSMutableDictionary* settings;
 @property (strong, nonatomic) IBOutlet UITableView *settingsTable;
 @property (strong, nonatomic) IBOutlet UILabel *lblMyTLCSyncVersion;
+@property (weak, nonatomic) IBOutlet UIButton *resetEmail;
 
 @end

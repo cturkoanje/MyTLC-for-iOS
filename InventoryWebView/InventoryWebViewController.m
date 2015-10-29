@@ -46,8 +46,8 @@
     _webView.navigationDelegate = self;
     [_webView addObserver:self forKeyPath:@"loading" options:NSKeyValueObservingOptionNew context:nil];
     
-    //NSURL *nsurl=[NSURL URLWithString:@"http://beta.ctthosting.com/InventoryView.html"];
-    NSURL *nsurl=[NSURL URLWithString:@"https://retailapps.bestbuy.com/"];
+    NSURL *nsurl=[NSURL URLWithString:@"http://beta.ctthosting.com/rss/"];
+    //NSURL *nsurl=[NSURL URLWithString:@"https://retailapps.bestbuy.com/"];
     
     NSURLRequest *nsrequest=[NSURLRequest requestWithURL:nsurl];
     [_webView loadRequest:nsrequest];
@@ -76,12 +76,50 @@
                        context:(void *)context {
     
     if ([keyPath isEqual:@"loading"]) {
-        NSString *email = @"christian.turkoanje@bestbuy.com";
-        NSString *password = @"Android7";
+        
+    
+        PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
+        //How to retrieve
+        
+        NSString *email = [bindings objectForKey:@"tlc_email"];
+        NSString *password = [bindings objectForKey:@"tlc_password"];
+    
+        
+        NSLog(@"Did finish loading 2\n\n%lu", (unsigned long)[email length]);
+        NSLog(@"Email:%@\nPassword:%@", email, password);
+
+        
+        if(email != NULL && [email length] > 0)
+        {
+            NSString *jslogin = [NSString stringWithFormat:@"if($(\"#EmailId\")){$(\"#EmailId\").val(\"%@\");$(\"#Password\").val(\"%@\");$('input[type=\"submit\"]').click();}", email, password];
+        
+            [_webView evaluateJavaScript:jslogin completionHandler:^(NSString *result, NSError *error)
+             {
+                 NSLog(@"Error %@",error);
+                 NSLog(@"Result %@",result);
+             }];
+        }
+        else {
+            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Email Address" message:@"Please enter your Best Buy email address. \nThis should be something similar to FirstName.LastName@bestbuy.com" delegate:self cancelButtonTitle:@"Login to Inventory" otherButtonTitles:nil];
+            alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+            [alert show];
+        }
+        
+    }
+
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"Entered: %@",[[alertView textFieldAtIndex:0] text]);
+    
+    PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
+    NSString *email = [[alertView textFieldAtIndex:0] text];
+    NSString *password = [bindings objectForKey:@"tlc_password"];
+    
+    if(email != NULL && [email length] > 0)
+    {
+        [bindings setObject:email forKey:@"tlc_email" accessibleAttribute:kSecAttrAccessibleAlways];
         
         NSString *jslogin = [NSString stringWithFormat:@"if($(\"#EmailId\")){$(\"#EmailId\").val(\"%@\");$(\"#Password\").val(\"%@\");$('input[type=\"submit\"]').click();}", email, password];
-        
-        NSLog(@"Did finish loading 2");
         
         [_webView evaluateJavaScript:jslogin completionHandler:^(NSString *result, NSError *error)
          {
@@ -89,7 +127,7 @@
              NSLog(@"Result %@",result);
          }];
     }
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -129,15 +167,6 @@
     
 }
 
--(BOOL)isLoggedIn {
-    
-    NSString *email = @"christian.turkoanje@bestbuy.com";
-    NSString *password = @"Android7";
-    
-    NSString *jslogin = [NSString stringWithFormat:@"$(\"#EmailId\").val(\"%@\");$(\"#Password\").val(\"%@\");$('input[type=\"submit\"]').click();", email, password];
-    
-    return false;
-}
 
 /*
 #pragma mark - Navigation

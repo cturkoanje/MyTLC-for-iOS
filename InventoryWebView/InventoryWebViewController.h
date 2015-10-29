@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PDKeychainBindings.h"
 
 @import WebKit;
 

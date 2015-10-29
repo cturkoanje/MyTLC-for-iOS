@@ -226,7 +226,7 @@
                                                                 target:self
                                                                 action:@selector(openBarcodeScanner:)];
         
-        [self.navigationItem setRightBarButtonItem:item animated:YES];
+        //[self.navigationItem setRightBarButtonItem:item animated:YES];
         
         
     }

@@ -235,6 +235,25 @@
     [self loadSavedSettings];
 }
 
+- (IBAction)resetEmails:(UIButton *)sender {
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Email Address" message:@"Please enter your Best Buy email address. \nThis should be something similar to FirstName.LastName@bestbuy.com" delegate:self cancelButtonTitle:@"Login to Inventory" otherButtonTitles:nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"Entered: %@",[[alertView textFieldAtIndex:0] text]);
+    
+    PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
+    NSString *email = [[alertView textFieldAtIndex:0] text];
+    
+    if(email != NULL && [email length] > 0)
+    {
+        [bindings setObject:email forKey:@"tlc_email" accessibleAttribute:kSecAttrAccessibleAlways];
+    }
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
